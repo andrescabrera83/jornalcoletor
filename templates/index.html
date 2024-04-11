@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Extraido Dos Arquivos PDF</title>
+</head>
+<body>
+    <h1>Texto Extraido Dos Arquivos PDF</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for filename, text in pdf_texts.items() %}
+            <tr>
+                <td>{{ filename }}</td>
+                <td>{{ text }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
